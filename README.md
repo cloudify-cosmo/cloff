@@ -1,5 +1,5 @@
-# cloff
-Cloudify Offline
+# Club
+Cloudify Ultimate Bootstrapper
 
 
 Cloudify allows to create a tar file containing whatever you need to bootstrap Cloudify offline.

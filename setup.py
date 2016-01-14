@@ -26,23 +26,24 @@ def read(*parts):
 
 
 setup(
-    name='cloff',
+    name='club',
     version='0.0.1',
-    url='https://github.com/nir0s/cloff',
+    url='https://github.com/nir0s/club',
     author='Gigaspaces',
     author_email='cosmo-admin@gigaspaces.com',
     license='LICENSE',
     platforms='All',
     description='Simplifies Cloudify Offline Bootstrapping.',
     long_description=read('README.rst'),
-    packages=['cloff'],
+    packages=['club'],
     include_package_data=True,
     entry_points={
         'console_scripts': [
-            'cloff = cloff.cloff:main',
+            'club = club.club:main',
         ]
     },
     install_requires=[
-        "click==4.0",
+        "click==6.2",
+        "pyyaml==3.10"
     ]
 )
