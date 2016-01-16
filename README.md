@@ -1,8 +1,8 @@
-# Club
-Cloudify Ultimate Bootstrapper
+# Clo
+Cloudify Offline
 
 
-Cloudify allows to create a tar file containing whatever you need to bootstrap Cloudify offline.
+Clo creates a tar file containing whatever you need to bootstrap Cloudify offline.
 
 It:
 

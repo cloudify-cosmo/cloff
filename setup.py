@@ -26,7 +26,7 @@ def read(*parts):
 
 
 setup(
-    name='club',
+    name='clo',
     version='0.0.1',
     url='https://github.com/nir0s/club',
     author='Gigaspaces',
@@ -35,15 +35,16 @@ setup(
     platforms='All',
     description='Simplifies Cloudify Offline Bootstrapping.',
     long_description=read('README.rst'),
-    packages=['club'],
+    packages=['clo'],
     include_package_data=True,
     entry_points={
         'console_scripts': [
-            'club = club.club:main',
+            'clo = clo.clo:main',
         ]
     },
     install_requires=[
         "click==6.2",
-        "pyyaml==3.10"
+        "pyyaml==3.10",
+        "sh==1.11"
     ]
 )
