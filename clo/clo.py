@@ -109,8 +109,6 @@ class Clo():
                     if not os.path.isdir(destination_dir):
                         lgr.debug('Creating: {0}'.format(destination_dir))
                         os.makedirs(destination_dir)
-                    # lgr.info('Downloading {0} to {1}'.format(
-                    #     url, destination_path))
                     self._download_manager_resource(url, destination_path)
 
             for url in urls:
