@@ -45,6 +45,7 @@ setup(
     install_requires=[
         "click==6.2",
         "pyyaml==3.10",
-        "sh==1.11"
+        "sh==1.11",
+        "retrying==1.3.3"
     ]
 )
