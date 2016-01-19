@@ -103,15 +103,15 @@ class Clo():
                 if os.path.isfile(destination_path):
                     lgr.warn('{0} already exists. Skipping...'.format(
                         destination_path))
-                    continue
+                    return
                 # only handle url with relevant prefix (i.e, manager resources)
                 if url.startswith(tuple(FILE_SERVER_MODIFIERS)):
                     if not os.path.isdir(destination_dir):
                         lgr.debug('Creating: {0}'.format(destination_dir))
                         os.makedirs(destination_dir)
-                    lgr.info('Downloading {0} to {1}'.format(
-                        url, destination_path))
-                    # self._download_manager_resource(url, destination_path)
+                    # lgr.info('Downloading {0} to {1}'.format(
+                    #     url, destination_path))
+                    self._download_manager_resource(url, destination_path)
 
             for url in urls:
                 _handle_url(url)
@@ -223,13 +223,12 @@ class Clo():
             md5_returned = hashlib.md5(data).hexdigest()
 
         if original_md5 == md5_returned:
-            lgr.info('md5 checksum validation successful...')
             return True
         else:
-            lgr.info('md5 checksum validation failed! '
-                     'Original checksum: {0} '
-                     'Calculated checksum: {1}.'.format(
-                         original_md5, md5_returned))
+            lgr.error('md5 checksum validation failed! '
+                      'Original checksum: {0} '
+                      'Calculated checksum: {1}.'.format(
+                          original_md5, md5_returned))
             return False
 
     def _get_meta(self, path):
