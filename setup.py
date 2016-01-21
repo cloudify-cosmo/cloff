@@ -26,20 +26,20 @@ def read(*parts):
 
 
 setup(
-    name='clo',
+    name='cloff',
     version='0.0.1',
-    url='https://github.com/nir0s/club',
+    url='https://github.com/nir0s/cloff',
     author='Gigaspaces',
     author_email='cosmo-admin@gigaspaces.com',
     license='LICENSE',
     platforms='All',
     description='Simplifies Cloudify Offline Bootstrapping.',
     long_description=read('README.rst'),
-    packages=['clo'],
+    packages=['cloff'],
     include_package_data=True,
     entry_points={
         'console_scripts': [
-            'clo = clo.clo:main',
+            'cloff = cloff.cloff:main',
         ]
     },
     install_requires=[
